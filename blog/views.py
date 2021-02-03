@@ -13,3 +13,9 @@ class HomePageView(generic.ListView):
 class BlogDetailView(generic.DetailView):
     model  = Post
     template_name = 'blog/pos_detail.html'
+
+
+class BlogCreateView(generic.CreateView):
+    template_name = 'blog/post_new.html'
+    model = Post
+    fields = ['title', 'author', 'body']
